@@ -1,0 +1,27 @@
+name: Pipeline CI/CD AWS Laboratory
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build-and-push:
+    runs-on: ubuntu-lastest
+
+    steps:
+      - name: checkout
+        uses: actions/checkout@v3
+
+      - name: login a dockerhub
+        uses: docker/login-action@v2
+        with:
+          username: ${{ secrets.USER_DOCKERHUB }}
+          password: ${{ secrets.PASSWORD_DOCKERHUB }}
+
+      - name: build push imagen
+        uses: docker/build-push-action@v4
+        with: 
+          context: .
+          push: true
+          tags: ${{ secrets.USER_DOCKERHUB }}/nginx-laboratorio:lastest
