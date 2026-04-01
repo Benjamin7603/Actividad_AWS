@@ -7,7 +7,7 @@ on:
 
 jobs:
   build-and-push:
-    runs-on: ubuntu-lastest
+    runs-on: ubuntu-latest
 
     steps:
       - name: checkout
@@ -24,4 +24,4 @@ jobs:
         with: 
           context: .
           push: true
-          tags: ${{ secrets.USER_DOCKERHUB }}/nginx-laboratorio:lastest
+          tags: ${{ secrets.USER_DOCKERHUB }}/nginx-laboratorio:latest
