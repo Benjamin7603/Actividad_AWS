@@ -4,4 +4,4 @@
 
 ## Estrategia de Ramas
 
-# Se utiliza una estrategia de **Feature Branches** siguiendo el flujo de GitFlow para organizar el desarrollo del frontend, el docker y la documentación.
+# Se utiliza una estrategia de *Feature Branches* siguiendo el flujo de GitFlow para organizar el desarrollo del frontend, el docker y la documentación.
